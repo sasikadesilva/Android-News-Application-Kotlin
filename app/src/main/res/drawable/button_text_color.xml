@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-  
+    <!-- Disabled state: gray text color -->
+    <item android:textColor="@color/placeholder_color" android:state_enabled="false"/>
+    <!-- Enabled state: white text color -->
+    <item android:textColor="@color/white" android:state_enabled="true"/>
 </selector>

@@ -5,12 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     android:orientation="vertical">
 
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
+    android:layout_marginBottom="70dp"
     android:background="@color/background_color">
 
     <LinearLayout
@@ -39,6 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:hint="@string/email"
+            android:textColorHint="@color/placeholder_color"
             app:boxStrokeColor="@android:color/holo_red_light"
             app:boxCornerRadiusTopStart="30dp"
             app:boxCornerRadiusTopEnd="30dp"
@@ -54,6 +57,7 @@
                 android:id="@+id/emailText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/edit_text_color"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,6 +67,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/placeholder_color"
             android:layout_marginTop="16dp"
             android:hint="@string/password"
             app:boxStrokeColor="@android:color/holo_red_light"
@@ -81,6 +86,7 @@
                 android:id="@+id/passwordText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/edit_text_color"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,11 +97,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@drawable/rounded_button"
+            android:enabled="false"
+            android:fontFamily="sans-serif-medium"
             android:text="@string/login"
             android:textAllCaps="false"
-            android:textSize="16sp"
-            android:fontFamily="sans-serif-medium"
-            android:enabled="false" />
+            android:textColor="@drawable/button_text_color"
+            android:textSize="16sp" />
     </LinearLayout>
 </ScrollView>
 

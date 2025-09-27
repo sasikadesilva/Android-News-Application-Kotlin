@@ -1,5 +1,6 @@
 package com.example.newsapp.data.repository
 
+import androidx.lifecycle.LiveData
 import com.example.newsapp.data.dao.UserDao
 import com.example.newsapp.data.mapper.toDomain
 import com.example.newsapp.data.mapper.toEntity
@@ -20,4 +21,9 @@ class UserRepositoryImpl @Inject constructor(
     override suspend fun getUsers(): List<UserModel> {
         TODO("Not yet implemented")
     }
+
+    override  fun getUserByEmail(email: String): LiveData<UserModel>? {
+       return userDao.getUserByEmail(email)
+    }
+
 }

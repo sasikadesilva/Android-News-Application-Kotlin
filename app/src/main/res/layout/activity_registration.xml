@@ -26,12 +26,17 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:layout_marginBottom="70dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal"
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:id="@+id/backButton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:contentDescription="@string/todo"
                 android:src="@drawable/baseline_arrow_back"
                 tools:ignore="UseAppTint" />
@@ -41,6 +46,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="40dp"
                 android:text="@string/sign_up"
+                android:layout_marginTop="5dp"
                 android:textColor="@android:color/holo_blue_light"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -55,6 +61,7 @@
             android:hint="@string/first_name"
             app:boxStrokeColor="@android:color/holo_red_light"
             android:background="@drawable/rounded_text_field"
+            android:textColorHint="@color/placeholder_color"
             app:boxCornerRadiusTopStart="30dp"
             app:boxCornerRadiusTopEnd="30dp"
             app:boxCornerRadiusBottomStart="30dp"
@@ -68,6 +75,7 @@
                 android:id="@+id/firstNameText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/edit_text_color"
                 android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,6 +86,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_text_field"
+            android:textColorHint="@color/placeholder_color"
             android:layout_marginTop="12dp"
             android:hint="@string/last_name"
             app:boxCornerRadiusTopStart="30dp"
@@ -92,6 +101,7 @@
                 android:id="@+id/lastNameText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/edit_text_color"
                 android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,6 +112,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_text_field"
+            android:textColorHint="@color/placeholder_color"
             android:layout_marginTop="12dp"
             android:hint="@string/email"
             app:boxCornerRadiusTopStart="30dp"
@@ -116,6 +127,7 @@
                 android:id="@+id/emailText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/edit_text_color"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -126,6 +138,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_text_field"
+            android:textColorHint="@color/placeholder_color"
             android:layout_marginTop="12dp"
             android:hint="@string/password"
             app:passwordToggleEnabled="true"
@@ -141,6 +154,7 @@
                 android:id="@+id/passwordText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/edit_text_color"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -151,6 +165,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_text_field"
+            android:textColorHint="@color/placeholder_color"
             android:layout_marginTop="12dp"
             android:hint="@string/password"
             app:passwordToggleEnabled="true"
@@ -166,6 +181,7 @@
                 android:id="@+id/confirmPasswordText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/edit_text_color"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -178,10 +194,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:backgroundTint="@android:color/darker_gray"
             android:text="@string/sign_up"
+            android:textColor="@drawable/button_text_color"
             android:textAllCaps="false"
-            android:enabled="true"
+            android:enabled="false"
             android:padding="12dp"
             android:textSize="16sp"
             android:fontFamily="sans-serif-medium"
