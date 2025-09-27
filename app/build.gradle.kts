@@ -1,7 +1,13 @@
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt.android.plugin)
 }
+
+
 
 android {
     namespace = "com.example.newsapp"
@@ -45,4 +51,26 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+
+
+}
+
+configurations.all {
+    resolutionStrategy {
+        force("com.squareup:javapoet:1.13.0")
+    }
+}
+
+// Hilt settings
+hilt {
+    enableAggregatingTask = false
 }
