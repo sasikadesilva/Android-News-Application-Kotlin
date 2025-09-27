@@ -24,12 +24,10 @@ class UserRegisterUseCase @Inject constructor(private val repo: UserRepositoryIm
         if (user.password.length < 8) {
             throw Exception("Password must be at least 8 characters long")
         }
-        if (!user.email.contains("@")) {
+        if (!user.email.contains("@") || !user.email.contains(".")) {
             throw Exception("Invalid email address")
         }
-        if (!user.email.contains(".")) {
-            throw Exception("Invalid email address")
-        }
+
 
        val salt = PasswordHasher.generateSalt()
         val hashedPassword = PasswordHasher.hashPassword(user.password, salt)

@@ -5,7 +5,7 @@ import dagger.hilt.android.HiltAndroidApp
 
 
 @HiltAndroidApp
-class Application : Application() { // Remove the extra { from here
+class NewsAppApplication : Application() { // Remove the extra { from here
 
     override fun onCreate() {
         super.onCreate()

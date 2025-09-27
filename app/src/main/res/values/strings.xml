@@ -10,4 +10,7 @@
     <string name="first_name">First Name</string>
     <string name="todo">TODO</string>
     <string name="do_not_have_an_account">Do not have an account?</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>

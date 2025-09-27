@@ -2,5 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="background_color">#ECECEC</color>
+    <color name="background_color">#f0f0f0</color>
+    <color name="placeholder_color">#c5dedf</color>
+    <color name="edit_text_color">#57585b</color>
+    <color name="button_enable_color">#47c7f1</color>
+    <color name="button_disable_color">#FFFFFFFF</color>
+
+
+
 </resources>
+

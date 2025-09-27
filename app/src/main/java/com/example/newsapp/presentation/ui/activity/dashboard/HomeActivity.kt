@@ -10,6 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.example.newsapp.presentation.ui.activity.dashboard.ui.main.SectionsPagerAdapter
 import com.example.newsapp.databinding.ActivityHomeBinding
+import com.example.newsapp.R
 
 class HomeActivity : AppCompatActivity() {
 
