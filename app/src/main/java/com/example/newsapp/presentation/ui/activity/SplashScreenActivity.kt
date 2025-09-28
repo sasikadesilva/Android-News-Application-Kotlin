@@ -11,7 +11,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.example.newsapp.R
-import com.example.newsapp.data.model.UserModel
+import com.example.newsapp.data.model.entity.UserModel
 import com.example.newsapp.presentation.ui.activity.auth.LoginActivity
 import com.example.newsapp.presentation.ui.activity.dashboard.HomeActivity
 import com.example.newsapp.presentation.viewmodel.UserViewModel

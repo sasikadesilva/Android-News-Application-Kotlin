@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.room.Room
 import com.example.newsapp.NewsAppApplication
+import com.example.newsapp.data.dao.ArticleDao
 import com.example.newsapp.data.dao.UserDao
 import com.example.newsapp.data.repository.PreferencesRepositoryImpl
 import com.example.newsapp.data.source.local.AppDatabase
@@ -34,6 +35,11 @@ object LocaleDbModule {
     @Provides
     fun provideUserDao(appDatabase: AppDatabase): UserDao {
         return appDatabase.userDao()
+    }
+
+    @Provides
+    fun provideArticleDao(appDatabase: AppDatabase): ArticleDao {
+        return appDatabase.articleDao()
     }
 
     @Provides

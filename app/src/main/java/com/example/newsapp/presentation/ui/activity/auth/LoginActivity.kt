@@ -12,9 +12,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import com.example.newsapp.R
-import com.example.newsapp.data.model.UserModel
+import com.example.newsapp.data.model.entity.UserModel
+import com.example.newsapp.presentation.ui.activity.dashboard.HomeActivity
 import com.example.newsapp.presentation.viewmodel.UserViewModel
 import com.example.newsapp.util.CryptoUtil
+import com.example.newsapp.util.PasswordHasher
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
@@ -39,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
         emailEditText = findViewById(R.id.emailText)
         passwordEditText = findViewById(R.id.passwordText)
         val signUpButton = findViewById<TextView>(R.id.signUpButton)
-        val loginButton = findViewById<Button>(R.id.loginButton)
+        val loginButton = findViewById<MaterialButton>(R.id.loginButton)
 
         // Add TextWatcher to monitor changes in all TextViews
         val textWatcher = object : TextWatcher {
@@ -75,8 +78,11 @@ class LoginActivity : AppCompatActivity() {
             // Call the ViewModel to perform login
             livedataEmail = userViewModel.getUserByEmail(email)
             livedataEmail?.observe(this, Observer { user ->
-                if (user != null) {
+                if (user != null && PasswordHasher.verifyPassword(password, user.password, user.passwordSalt)) {
                     userViewModel.addUserSessionInfo(user)
+                    val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
                 } else {
 
 

@@ -52,6 +52,9 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.paging.common)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -66,6 +69,18 @@ dependencies {
     ksp(libs.hilt.android.compiler)
 
     implementation(libs.gson)
+    // Retrofit
+    implementation(libs.retrofit)
+// Gson converter (for JSON)
+    implementation(libs.retrofit2.converter.gson)
+// OkHttp (for logging network requests)
+    implementation(libs.logging.interceptor)
+
+    implementation(libs.androidx.fragment.ktx)
+
+    implementation(libs.glide)
+    ksp(libs.glide.compiler)
+
 
 
 }

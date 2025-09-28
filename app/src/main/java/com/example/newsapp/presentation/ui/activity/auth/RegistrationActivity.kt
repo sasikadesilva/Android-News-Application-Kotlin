@@ -3,6 +3,7 @@ package com.example.newsapp.presentation.ui.activity.auth
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
@@ -11,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import com.example.newsapp.R
-import com.example.newsapp.data.model.UserModel
+import com.example.newsapp.data.model.entity.UserModel
 import com.example.newsapp.presentation.viewmodel.UserViewModel
 import com.google.android.material.textfield.TextInputEditText
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,6 +40,7 @@ class RegistrationActivity : AppCompatActivity() {
         confirPasswordEditText = findViewById(R.id.confirmPasswordText)
         val signUpButton = findViewById<Button>(R.id.signUpButton)
         val backButton = findViewById<ImageView>(R.id.backButton)
+        val loginButton = findViewById<View>(R.id.loginButton)
 
         // Add TextWatcher to monitor changes in all TextViews
         val textWatcher = object : TextWatcher {
@@ -66,6 +68,10 @@ class RegistrationActivity : AppCompatActivity() {
             this.onBackPressed()
         }
 
+
+        loginButton.setOnClickListener {
+            finish()
+        }
 
         // Observe for registration success status
         userViewModel.registrationSuccess.observe(this) { isSuccess ->
