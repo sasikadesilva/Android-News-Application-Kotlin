@@ -1,12 +1,13 @@
 package com.example.newsapp.domain.usecase
 
-import com.example.newsapp.data.model.UserModel
+import com.example.newsapp.data.model.entity.UserModel
 import com.example.newsapp.data.repository.UserRepositoryImpl
+import com.example.newsapp.domain.repository.UserRepository
 import com.example.newsapp.util.PasswordHasher
 import javax.inject.Inject
 
 
-class UserRegisterUseCase @Inject constructor(private val repo: UserRepositoryImpl){
+class UserRegisterUseCase @Inject constructor(private val repo: UserRepository){
 
     suspend operator fun invoke(user: UserModel)  {
         if (user.firstName.isEmpty()) {

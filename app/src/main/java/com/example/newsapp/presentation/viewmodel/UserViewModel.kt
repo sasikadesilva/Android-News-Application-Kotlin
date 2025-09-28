@@ -4,7 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.newsapp.data.model.UserModel
+import com.example.newsapp.data.model.entity.Article
+import com.example.newsapp.data.model.entity.UserModel
 import com.example.newsapp.domain.usecase.UserPreferencesUseCase
 import com.example.newsapp.domain.usecase.UserRegisterUseCase
 import com.example.newsapp.domain.usecase.UserVerificationUseCase
@@ -56,4 +57,6 @@ class UserViewModel @Inject constructor(
         }
 
     }
+
+
 }

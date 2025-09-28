@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.newsapp.data.model.UserModel
+import com.example.newsapp.data.model.entity.UserModel
 
 @Dao
 interface UserDao {

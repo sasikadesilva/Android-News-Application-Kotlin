@@ -7,6 +7,8 @@
     <color name="edit_text_color">#57585b</color>
     <color name="button_enable_color">#47c7f1</color>
     <color name="button_disable_color">#FFFFFFFF</color>
+    <color name="red_color">#f0072e</color>
+    <color name="news_view_box_color">#F1F1F1</color>
 
 
 

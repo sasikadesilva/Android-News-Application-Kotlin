@@ -1,6 +1,8 @@
 package com.example.newsapp.di
 
+import com.example.newsapp.data.repository.ArticleRepositoryImpl
 import com.example.newsapp.data.repository.UserRepositoryImpl
+import com.example.newsapp.domain.repository.ArticleRepository
 import com.example.newsapp.domain.repository.UserRepository
 import dagger.Binds
 import dagger.Module
@@ -17,4 +19,10 @@ abstract class RepositoryModule {
     abstract fun bindUserRepository(
         userRepositoryImpl: UserRepositoryImpl
     ): UserRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindArticleRepository(
+        articleRepositoryImpl: ArticleRepositoryImpl
+    ): ArticleRepository
 }

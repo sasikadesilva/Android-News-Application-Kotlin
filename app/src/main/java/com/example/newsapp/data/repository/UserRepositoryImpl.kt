@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import com.example.newsapp.data.dao.UserDao
 import com.example.newsapp.data.mapper.toDomain
 import com.example.newsapp.data.mapper.toEntity
-import com.example.newsapp.data.model.UserModel
+import com.example.newsapp.data.model.entity.UserModel
 import com.example.newsapp.data.source.local.AppDatabase
 import com.example.newsapp.domain.repository.UserRepository
 import javax.inject.Inject

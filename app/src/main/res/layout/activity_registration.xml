@@ -85,6 +85,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="@android:color/holo_red_light"
             android:background="@drawable/rounded_text_field"
             android:textColorHint="@color/placeholder_color"
             android:layout_marginTop="12dp"
@@ -187,21 +188,32 @@
 
 
 
+
+
         <!-- Sign Up Button -->
-        <Button
+        <com.google.android.material.button.MaterialButton
+
             android:id="@+id/signUpButton"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:text="@string/sign_up"
-            android:textColor="@drawable/button_text_color"
-            android:textAllCaps="false"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_button"
             android:enabled="false"
-            android:padding="12dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/button_text_color"
             android:textSize="16sp"
-            android:fontFamily="sans-serif-medium"
-            android:background="@drawable/rounded_button" />
+            app:backgroundTint="@null"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/edit_text_color"
+            app:strokeWidth="1dp" />
 
 
 
